@@ -17,10 +17,25 @@
 * **Zero Data Collection**: No APIs, no servers. Your data stays on your machine.
 
 ### 🛠 Installation
-1. Download this project folder.
-2. Go to `chrome://extensions/` in your browser.
-3. Enable **"Developer mode"**.
-4. Click **"Load unpacked"** and select the folder.
+1. Download or clone this project folder.
+2. Go to `chrome://extensions/` in your browser (Chrome, Edge, or other Chromium-based browsers).
+3. Turn on **Developer mode** (top right).
+4. Click **Load unpacked** and select the **project root folder** (the one that contains `manifest.json`).
+
+### 📦 Packaging (release ZIP)
+From the project root, run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\package.ps1
+```
+
+This creates `dist/Gemini-Vault-MD-v{version}.zip` with `manifest.json`, scripts, and `icons/` at the root of the archive—suitable for sharing or for [Chrome Web Store](https://chrome.google.com/webstore/devconsole) uploads. To install locally from the ZIP, extract it to a folder, then use **Load unpacked** on that folder.
+
+### ▶️ How to use
+1. Open [Gemini](https://gemini.google.com/) and go to a chat (new or existing).
+2. Click the **Gemini-Vault-MD** icon in the browser toolbar.
+3. The full conversation is exported as Markdown: a **`.md` file downloads** automatically, and the same text is **copied to the clipboard** (paste into Obsidian, Notion, VS Code, etc.).
+4. If nothing is exported, stay on a chat page and ensure the page has finished loading; Gemini’s layout can change over time.
 
 ---
 
@@ -37,10 +52,25 @@
 * **隐私护航**：零 API 调用，无后台服务器，数据转换完全在浏览器本地内存完成。
 
 ### 🛠 安装步骤
-1. 下载本项目文件夹。
-2. 在浏览器地址栏输入 `chrome://extensions/`。
-3. 开启右上角的**“开发者模式”**。
-4. 点击**“加载已解压的扩展程序”**，选择本项目文件夹。
+1. 下载或克隆本项目到本地。
+2. 在浏览器地址栏打开 `chrome://extensions/`（Chrome、Edge 等 Chromium 内核浏览器均可）。
+3. 打开右上角**开发者模式**。
+4. 点击**加载已解压的扩展程序**，选择**含有 `manifest.json` 的项目根目录**。
+
+### 📦 打包脚本（发布用 ZIP）
+在项目根目录执行：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\package.ps1
+```
+
+会在 `dist` 目录下生成 `Gemini-Vault-MD-v{版本号}.zip`，压缩包根目录即为扩展结构（`manifest.json`、`background.js`、`content.js`、`icons/`），便于分发或提交 [Chrome 网上应用店](https://chrome.google.com/webstore/devconsole)。若要从 ZIP 本地安装，请先解压到任意文件夹，再对该文件夹执行**加载已解压的扩展程序**。
+
+### ▶️ 如何使用扩展
+1. 打开 [Gemini](https://gemini.google.com/) 并进入一段对话（新建或历史会话均可）。
+2. 点击浏览器工具栏中的 **Gemini-Vault-MD** 扩展图标。
+3. 当前会话会以 Markdown 导出：**自动下载**带时间戳的 `.md` 文件，同时内容会**写入系统剪贴板**，可直接粘贴到 Obsidian、Notion、VS Code 等。
+4. 若无反应，请确认停留在对话页面且页面已加载完成；Google 可能调整页面结构，若遇解析问题可反馈或自行更新选择器。
 
 ---
 
