@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Gemini-Vault-MD (Beta)",
-  "version": "0.9.0",
-  "description": "Beta: Export Gemini chats to Markdown. Long threads may be incomplete when Gemini only renders part of the conversation in the DOM.",
+  "version": "0.9.1",
+  "description": "Beta: Export Gemini chats to Markdown. Long threads may be incomplete when Gemini only renders part of the conversation in the DOM. Per-message times appear only if the page exposes them in the DOM.",
   "permissions": [
     "activeTab",
     "scripting",

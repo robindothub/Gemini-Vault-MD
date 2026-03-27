@@ -9,6 +9,8 @@
 
 **Gemini-Vault-MD** is a lightweight, 100% private browser extension designed to export your Gemini conversations into clean, structured Markdown. 
 
+**Current version:** `0.9.1` (Beta). Thread export pre-scrolls top→bottom before capture; the downloaded `.md` filename uses the sidebar title or (when the title is generic) the first user message, plus a local date-time. Optional per-message timestamps are written into the Markdown only when Gemini’s DOM includes parseable time data—often it does not, so those lines may be absent.
+
 ### 🚀 New Features
 * **Double Export Mode**: 
     * **Auto-Download**: Instantly saves your chat as a `.md` file with a local timestamp.
@@ -43,6 +45,8 @@ This creates `dist/Gemini-Vault-MD-v{version}.zip` with `manifest.json`, scripts
 ## 🏮 中文说明
 
 **Gemini-Vault-MD** 是一款轻量级、100% 隐私安全的浏览器扩展，旨在将你的 Gemini 对话完美导出为 Markdown 格式。
+
+**当前版本：** `0.9.1`（Beta）。导出前会自上而下预滚动会话以尽量抓全内容；下载文件名优先使用侧栏标题，若为「对话」等占位文案则改用首条用户提问，并附带本地日期时间。若页面 DOM 中带有可解析的每条消息时间，会写入 Markdown；**多数情况下 Gemini 并不暴露这类数据，时间线可能仍为空。**
 
 ### 🚀 新增功能
 * **双重导出模式**：
